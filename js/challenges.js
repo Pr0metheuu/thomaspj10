@@ -46,7 +46,7 @@ function setChallengeProgress() {
 
 function getChallengeBonus(challenge_name, current = false) {
     if (challenge_name == "an_unhappy_life" || challenge_name == 1) {
-        return softcap(Math.pow((current ? getHappiness() : gameData.challenges.an_unhappy_life) + 1, 0.31), 500, 0.45)
+        return softcap(Math.pow((current ? getHappiness() : gameData.challenges.an_unhappy_life) + 1, 0.001), 500, 0.001)
     }
     if (challenge_name == "rich_and_the_poor" || challenge_name == 2) {
         return softcap(Math.pow((current ? getIncome() : gameData.challenges.rich_and_the_poor) + 1, 0.25), 25, 0.55)
